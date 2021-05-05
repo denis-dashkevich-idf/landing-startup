@@ -2,13 +2,20 @@
 
 const gulp = require("gulp");
 const sass = require("gulp-sass");
+const sourcemaps = require('gulp-sourcemaps');
+const gcmq = require('gulp-group-css-media-queries');
+const csso = require('gulp-csso');
 const browserSync = require("browser-sync").create();
 sass.compiler = require("node-sass");
 
 gulp.task("sass", function () {
   return gulp
     .src("./src/assets/scss/*.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
+    .pipe(gcmq())
+    .pipe(csso())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("./src/assets/css"))
     .pipe(browserSync.reload({ stream: true }));
 });

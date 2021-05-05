@@ -1,13 +1,18 @@
 .header {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  padding: 20px 0;
   transition: 0.2s;
   color: #fff;
 
   &_has-bg {
     background: #f1f1f1;
+    color: var(--txt-black);
+  }
+
+  &_menu-opend {
     color: var(--txt-black);
   }
 
@@ -22,9 +27,17 @@
     align-items: center;
     text-decoration: none;
     color: currentColor;
+
+    @include breakpoint(md) {
+      position: relative;
+      z-index: 15;
+    }
   }
 
   &__logo {
+    path {
+      fill: currentColor;
+    }
   }
 
   &__logo-text {
@@ -35,31 +48,151 @@
   }
 
   &__menu-container {
+    @include breakpoint(md) {
+      display: none;
+      position: fixed;
+      padding-top: 80px;
+      padding-right: 25px;
+      padding-bottom: 0;
+      padding-left: 25px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #f1f1f1;
+      z-index: 9;
+
+      &_visible {
+        display: block;
+      }
+    }
+
   }
 
   &__nav {
+
+    @include breakpoint(md) {
+      height: 100%;
+      overflow-y: auto;
+    }
   }
 
   &__menu {
+    @include reset-list();
     display: flex;
-    list-style-type: none;
 
-    li > a {
-      display: inline-block;
-      color: currentColor;
-      font-size: 16px;
-      font-weight: normal;
-      text-decoration: none;
-      padding: 15px;
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
+
+    .menu-item {
+      position: relative;
+
+      &:hover {
+        a {
+          background: #fff;
+          color: var(--txt-black);
+
+          @include breakpoint(md) {
+            background: transparent;
+          }
+        }
+
+        .sub-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translate(0, 0);
+        }
+      }
+
+      > a {
+        display: inline-block;
+        color: currentColor;
+        font-size: 16px;
+        font-weight: normal;
+        text-decoration: none;
+        padding: 15px;
+
+        @include breakpoint(md) {
+          font-size: 22px;
+        }
+      }
     }
 
     .sub-menu {
-      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 150px;
+      padding: 0;
+      background: #fff;
+      list-style-type: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, -20px);
+      transition: $fast;
+
+      @include breakpoint(md) {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+        background: transparent;
+        padding-left: 30px;
+      }
+
+      > .menu-item {
+        &:hover {
+          > a {
+            background: #f1f1f1;
+
+            @include breakpoint(md) {
+              background: transparent;
+            }
+          }
+
+          .sub-menu {
+            display: block;
+          }
+        }
+
+        > a {
+          width: 100%;
+
+          @include breakpoint(md) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .sub-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+
+        @include breakpoint(md) {
+          display: block;
+          position: static;
+          padding-left: 20px;
+        }
+      }
     }
   }
 
   &__cta {
     color: currentColor;
     border-color: currentColor;
+
+    @include breakpoint(md) {
+      position: relative;
+      margin-left: auto;
+      margin-right: 30px;
+      z-index: 15;
+    }
+  }
+
+  &__burger {
+    color: currentColor;
   }
 }
