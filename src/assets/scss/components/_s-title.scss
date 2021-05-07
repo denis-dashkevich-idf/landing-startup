@@ -1,0 +1,16 @@
+.s-title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: -1.5px;
+  text-align: center;
+  line-height: 1.2;
+
+  @include breakpoint(md) {
+    font-size: 28px;
+  }
+
+  @include breakpoint(sm) {
+    font-size: 24px;
+  }
+}

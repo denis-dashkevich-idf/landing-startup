@@ -1,38 +1,156 @@
 .promo {
+  position: relative;
   padding-top: 180px;
-  padding-bottom: 200px;
-  background-image: var(--bg-gr-prime);
+  padding-bottom: 100px;
+  min-height: 100vh;
+  background-image: url(../img/promo/pattern.svg), var(--bg-gr-prime);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  border-radius: 0 0 13% 0/0 0 20% 0;
+
+  @include breakpoint(lg) {
+    min-height: unset;
+  }
+
+  @include breakpoint(md) {
+    border-radius: 0;
+  }
+
+  @include breakpoint(sm) {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
 
   &__inner {
+    max-width: 650px;
+
+    @include breakpoint(md) {
+      max-width: 600px;
+    }
+  }
+
+  &__content-wrap {
+    position: relative;
+    z-index: 1;
   }
 
   &__title {
+    font-weight: bold;
+    font-size: 85px;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @include breakpoint(lg) {
+      font-size: 65px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 45px;
+    }
   }
 
   &__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    max-width: 510px;
+    margin-bottom: 38px;
+    line-height: 200%;
   }
 
   &__btns-group {
   }
 
   &__cta {
+    margin-right: 20px;
   }
 
   &__btn-watch {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      &::before {
+        transform: scale(1.1) rotate(125deg);
+      }
+    }
+
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg width='25' height='26' viewBox='0 0 25 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.5 0.997559C5.5965 0.997559 0 6.59434 0 13.497C0 20.4018 5.5965 25.9981 12.5 25.9981C19.4035 25.9981 25 20.4018 25 13.497C25 6.59434 19.4035 0.997559 12.5 0.997559ZM16.8203 14.1599L10.5703 18.0669C10.4439 18.1459 10.3 18.1852 10.1563 18.1852C10.0261 18.1852 9.89548 18.1524 9.77749 18.0868C9.52916 17.9497 9.37502 17.6873 9.37502 17.4046V9.59165C9.37502 9.30776 9.52916 9.04593 9.77749 8.90831C10.0258 8.7696 10.3295 8.77767 10.5703 8.92929L16.8203 12.8346C17.0486 12.9782 17.1875 13.2287 17.1875 13.497C17.1875 13.7669 17.0486 14.018 16.8203 14.1599Z' fill='white'/%3E%3C/svg%3E");
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+      transition: $fast;
+    }
   }
 
   &__sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
   }
 
   &__sponsors-txt {
+    font-weight: normal;
+    font-size: 16px;
+    opacity: 0.6;
+    margin-right: 20px;
+    margin-bottom: 5px;
   }
 
   &__sponsor-ico {
+    margin-right: 28px;
+    margin-bottom: 5px;
   }
 
   &__bg-wrap {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    width: 50%;
+    transform: translate(0, -45%);
+    pointer-events: none;
+
+    @include breakpoint(lg) {
+      top: 40%;
+    }
+
+    @include breakpoint(md) {
+      position: static;
+      transform: translate(0);
+      width: 100%;
+      pointer-events: visible;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: 40%;
+      width: 300px;
+      height: 350px;
+      background: url(../img/promo/pattern.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+      transform: translate(50%);
+
+      @include breakpoint(lg) {
+        width: 250px;
+        height: 300px;
+      }
+    }
   }
 
   &__phone-img {
+    margin-left: auto;
   }
 }

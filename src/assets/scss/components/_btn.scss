@@ -1,6 +1,7 @@
 .btn {
   display: inline-block;
   border: 1.5px solid #ffffff;
+  color: #fff;
   padding: 13px 30px;
   font-weight: 500;
   font-size: 16px;
@@ -16,5 +17,7 @@
   }
 
   &_fill {
+    background-color: #fff;
+    color: var(--txt-black);
   }
 }
