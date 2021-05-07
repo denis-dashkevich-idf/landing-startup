@@ -6,6 +6,7 @@
   padding: 20px 0;
   transition: 0.2s;
   color: #fff;
+  z-index: 2;
 
   &_has-bg {
     background: #f1f1f1;
@@ -74,109 +75,6 @@
     @include breakpoint(md) {
       height: 100%;
       overflow-y: auto;
-    }
-  }
-
-  &__menu {
-    @include reset-list();
-    display: flex;
-
-    @include breakpoint(md) {
-      flex-direction: column;
-    }
-
-    .menu-item {
-      position: relative;
-
-      &:hover {
-        a {
-          background: #fff;
-          color: var(--txt-black);
-
-          @include breakpoint(md) {
-            background: transparent;
-          }
-        }
-
-        .sub-menu {
-          opacity: 1;
-          visibility: visible;
-          transform: translate(0, 0);
-        }
-      }
-
-      > a {
-        display: inline-block;
-        color: currentColor;
-        font-size: 16px;
-        font-weight: normal;
-        text-decoration: none;
-        padding: 15px;
-
-        @include breakpoint(md) {
-          font-size: 22px;
-        }
-      }
-    }
-
-    .sub-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 150px;
-      padding: 0;
-      background: #fff;
-      list-style-type: none;
-      opacity: 0;
-      visibility: hidden;
-      transform: translate(0, -20px);
-      transition: $fast;
-
-      @include breakpoint(md) {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: translate(0, 0);
-        background: transparent;
-        padding-left: 30px;
-      }
-
-      > .menu-item {
-        &:hover {
-          > a {
-            background: #f1f1f1;
-
-            @include breakpoint(md) {
-              background: transparent;
-            }
-          }
-
-          .sub-menu {
-            display: block;
-          }
-        }
-
-        > a {
-          width: 100%;
-
-          @include breakpoint(md) {
-            font-size: 18px;
-          }
-        }
-      }
-
-      .sub-menu {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 100%;
-
-        @include breakpoint(md) {
-          display: block;
-          position: static;
-          padding-left: 20px;
-        }
-      }
     }
   }
 

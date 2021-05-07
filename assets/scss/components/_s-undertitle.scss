@@ -1,0 +1,15 @@
+.s-undertitle {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--txt-blur);
+  text-align: center;
+  letter-spacing: 2.1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0;
+  text-transform: uppercase;
+
+  @include breakpoint(md) {
+    
+  }
+}

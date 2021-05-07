@@ -25,7 +25,7 @@
         </a>
         <div class="header__menu-container">
           <nav class="header__nav">
-            <ul class="header__menu">
+            <ul class="header__menu menu">
               <li class="menu-item">
                 <a href="/">Home</a>
               </li>
@@ -68,7 +68,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="menu-item">
+              <li class="menu-item menu-item-has-children">
                 <a href="/">Supports</a>
                 <ul class="sub-menu">
                   <li class="menu-item">
@@ -109,11 +109,16 @@
     <section class="promo">
       <div class="container">
         <div class="promo__inner">
-          <h1 class="promo__title">Experience your ultimate mobile
-            application</h1>
-          <p class="promo__subtitle">Get your blood tests delivered at let home collect sample from the victory of the
-            managments that supplies best
-            design system guidelines ever.</p>
+          <div class="promo__content-wrap">
+            <h1 class="promo__title">Experience your ultimate mobile
+              application</h1>
+            <p class="promo__subtitle">Get your blood tests delivered at let home collect sample from the victory of the
+              managments that supplies best
+              design system guidelines ever.</p>
+          </div>
+          <div class="promo__bg-wrap">
+            <img src="./assets/img/promo/photo.jpg" alt="phone" class="promo__phone-img" loading="lazy">
+          </div>
           <div class="promo__btns-group">
             <a href="/" class="promo__cta btn btn_fill">Get Started</a>
             <button class="promo__btn-watch">Watch Video</button>
@@ -124,14 +129,37 @@
             <img src="./assets/img/promo/google.png" alt="google" class="promo__sponsor-ico">
             <img src="./assets/img/promo/Dropbox_logo_2017.png" alt="dropbox" class="promo__sponsor-ico">
           </div>
-          <div class="promo__bg-wrap">
-            <img src="./assets/img/promo/photo.jpg" alt="phone" class="promo__phone-img" loading="lazy">
-          </div>
         </div>
       </div>
     </section>
 
-    <!--  -->
+    <!-- about -->
+    <section class="about">
+      <div class="container">
+        <p class="about__undertitle s-undertitle">Quality features</p>
+        <h2 class="about__title s-title">Meet exciting feature of app</h2>
+        <div class="about__grid">
+          <div class="about__card">
+            <img src="./assets/img/about/icon1.png" alt="Vector Editing" class="about__card-ico">
+            <p class="about__card-title">Vector Editing</p>
+            <p class="about__card-desc">Get your blood tests delivered at home collect a sample from the your blood
+              tests.</p>
+          </div>
+          <div class="about__card">
+            <img src="./assets/img/about/icon2.png" alt="Customize & Monitoring" class="about__card-ico">
+            <p class="about__card-title">Customize & Monitoring</p>
+            <p class="about__card-desc">Get your blood tests delivered at home collect a sample from the your blood
+              tests.</p>
+          </div>
+          <div class="about__card">
+            <img src="./assets/img/about/icon3.png" alt="Quality & short-period" class="about__card-ico">
+            <p class="about__card-title">Quality & short-period</p>
+            <p class="about__card-desc">Get your blood tests delivered at home collect a sample from the your blood
+              tests.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
