@@ -7,3 +7,7 @@ Project purpose is to learn how to use scss, scss architecture 7+1, gulp bundle,
 * Run command "npm install"
 * Run command "gulp watch"
 * Profit!
+
+## To deploy on gh-pages
+
+git subtree push --prefix src origin gh-pages
