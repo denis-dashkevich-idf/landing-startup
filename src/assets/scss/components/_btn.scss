@@ -20,4 +20,10 @@
     background-color: #fff;
     color: var(--txt-black);
   }
+
+  &_prime {
+    background-color: var(--bg-blue);
+    border-color: transparent;
+    color: #fff;
+  }
 }

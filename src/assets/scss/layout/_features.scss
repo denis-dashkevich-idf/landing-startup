@@ -1,0 +1,80 @@
+.features {
+  padding-top: 80px;
+  padding-bottom: 10px;
+
+  @include breakpoint(sm) {
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__row {
+
+    @include breakpoint(sm) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+  }
+
+  &__undertitle {
+  }
+
+  &__title {
+    margin-bottom: 80px;
+
+    @include breakpoint(sm) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__card {
+    @include col();
+    @include size(1/3);
+    display: flex;
+    background: #fff;
+    transition: $fast;
+    margin-bottom: 100px;
+
+    @include breakpoint(md) {
+      @include size(1/2);
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint(sm) {
+      width: 75vw;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+
+      @include breakpoint(sm) {
+        transform: none;
+      }
+    }
+  }
+
+  &__card-img {
+    flex-shrink: 1;
+    align-self: flex-start;
+  }
+
+  &__card-content {
+    padding-left: 25px;
+  }
+
+  &__card-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__card-desc {
+    font-weight: normal;
+    font-size: 15px;
+    color: var(--txt-black-secondary);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
