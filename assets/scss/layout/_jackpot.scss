@@ -1,0 +1,64 @@
+.jackpot {
+  padding-top: 100px;
+  padding-bottom: 220px;
+  overflow: hidden;
+
+  @include breakpoint(md) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  @include breakpoint(sm) {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  &__row {
+    align-items: center;
+  }
+
+  &__info-block {
+    @include col();
+    @include size(1/2);
+
+    @include breakpoint(md) {
+      @include size(1);
+    }
+  }
+
+  &__undertitle {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      max-width: 500px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 30px;
+  }
+
+  &__get-btn {
+  }
+
+  &__bg-block {
+    @include col();
+    @include size(1/2);
+    @include f-center();
+
+    @include breakpoint(md) {
+      @include size(1);
+      padding-top: 20px;
+    }
+  }
+
+  &__img {
+    max-width: 110%;
+  }
+}
