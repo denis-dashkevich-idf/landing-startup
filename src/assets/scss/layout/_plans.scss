@@ -1,0 +1,27 @@
+.plans {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-image: url(../img/common/pattern.svg), var(--bg-gr-prime);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  &__undertitle {
+    color: currentColor;
+    opacity: 0.7;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__row {
+    justify-content: center;
+  }
+
+  &__card {
+    @include col();
+    @include size(5/12);
+    margin-bottom: 20px;
+  }
+}

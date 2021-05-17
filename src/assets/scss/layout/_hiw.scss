@@ -2,9 +2,14 @@
   padding-top: 90px;
   padding-bottom: 150px;
   color: #fff;
-  background-image: url(../img/hiw/pattern.svg), var(--bg-gr-prime);
+  background-image: url(../img/common/pattern.svg), var(--bg-gr-prime);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include breakpoint(md) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &__undertitle {
     color: transparentize($color: #fff, $amount: 0.3);
@@ -12,12 +17,29 @@
 
   &__title {
     margin-bottom: 140px;
+
+    @include breakpoint(md) {
+      margin-bottom: 100px;
+    }
   }
 
   &__row {
     display: flex;
     overflow-x: auto;
     counter-reset: number;
+
+    @include breakpoint(lg) {
+      margin-right: calc(var(--mob-padding) * -1);
+      margin-left: calc(var(--mob-padding) * -1);
+      padding-left: var(--mob-padding);
+      padding-right: var(--mob-padding);
+
+
+      &::after {
+        content: '';
+        padding-left: var(--mob-padding);
+      }
+    }
   }
 
   &__card {
@@ -25,6 +47,10 @@
     width: calc(100% / 4 - 60px / 4 * 3);
     flex-shrink: 0;
     margin-right: 60px;
+
+    @include breakpoint(lg) {
+      width: 230px;
+    }
 
     &::before {
       counter-increment: number;
