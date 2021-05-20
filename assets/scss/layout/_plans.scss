@@ -23,5 +23,13 @@
     @include col();
     @include size(5/12);
     margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      @include size(8/12);
+    }
+
+    @include breakpoint(sm) {
+      @include size(1);
+    }
   }
 }

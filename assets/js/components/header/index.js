@@ -10,5 +10,4 @@
     }
   });
   
-  console.log(header)
 })();
