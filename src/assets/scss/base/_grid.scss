@@ -37,7 +37,7 @@ $breakpoints: ( // breakpoints
 }
 
 @mixin offset($size) {
-  margin-left: calc(100% * #{$size} - var(--gutter));
+  margin-left: calc(100% * #{$size} + var(--gutter));
 }
 
 @mixin row() {

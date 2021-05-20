@@ -1,0 +1,19 @@
+.accordeon {
+
+  &__el {
+
+    &.active {
+    }
+
+  }
+
+  &__head {
+
+  }
+
+  &__body {
+    overflow: hidden;
+    height: 0;
+    transition: $fast;
+  }
+}
