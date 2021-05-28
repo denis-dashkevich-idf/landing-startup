@@ -1,5 +1,4 @@
 // mobile menu
-(function () {
   const burger = document.querySelector(".burger");
   const menuContainerEl = document.querySelector(".header__menu-container");
   
@@ -10,5 +9,3 @@
     document.body.classList.toggle('content-hidden');
   
   });
-
-})();

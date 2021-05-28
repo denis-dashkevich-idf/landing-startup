@@ -1,15 +1,13 @@
 html {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   line-height: 1.4;
 }
 
 body {
-
   &.content-hidden {
     overflow: hidden;
   }
 }
-
 
 img {
   display: block;
@@ -20,4 +18,29 @@ img {
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+p {
+  font-weight: normal;
+  font-size: 16px;
 }

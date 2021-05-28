@@ -1,3 +1,4 @@
-//=require components/header/index.js
-//=require components/mobileMenu/index.js
-//=require components/accordeon/index.js
+import './components/accordeon';
+import './components/header';
+import './components/mobileMenu';
+import './components/slider';

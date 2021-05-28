@@ -6,4 +6,23 @@
     margin-top: 60px;
     margin-bottom: 40px;
   }
+
+  &__row {
+    margin-top: 30px;
+  }
+
+  &__aside {
+    @include col();
+    @include size(3/12);
+    padding-top: 60px;
+  }
+
+  &__content {
+
+    &_col {
+      @include col();
+      @include size(9/12);
+    }
+
+  }
 }
