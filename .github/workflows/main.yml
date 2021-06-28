@@ -2,6 +2,8 @@ name: 🚀 Deploy website on push
 on: 
   push:
     branches: [ master ]
+    paths:
+      - 'dist/**'
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -9,8 +11,6 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-      with:
-        ref: deploy
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
