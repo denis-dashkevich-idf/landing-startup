@@ -20,3 +20,4 @@ jobs:
         port: 21
         password: ${{ secrets.PROD_FTP }}
         server-dir: /
+        
