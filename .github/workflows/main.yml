@@ -4,7 +4,7 @@ on:
     branches: [ master ]
 defaults:
   run:
-    working-directory: dist
+    working-directory: dist/.
 jobs:
   web-deploy:
     name: 🎉 Deploy
