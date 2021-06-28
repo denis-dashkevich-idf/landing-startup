@@ -2,20 +2,19 @@ name: 🚀 Deploy website on push
 on: 
   push:
     branches: [ master ]
+
+defaults:
+  run:
+  working-directory: dist
+  
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: dist
     
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-      defaults:
-        run:
-          working-directory: dist
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
@@ -25,6 +24,3 @@ jobs:
         port: 21
         password: ${{ secrets.PROD_FTP }}
         server-dir: /
-      defaults:
-        run:
-          working-directory: dist
