@@ -2,19 +2,15 @@ name: 🚀 Deploy website on push
 on: 
   push:
     branches: [ master ]
-
-defaults:
-  run:
-  working-directory: dist
-  
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
-    
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
+      with:
+        ref: deploy
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
