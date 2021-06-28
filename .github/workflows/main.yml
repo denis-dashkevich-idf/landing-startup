@@ -9,8 +9,8 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-        with:
-          path: dist
+      with:
+        path: dist
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
